@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock</title>
+    <link rel="shortcut icon" href="./clock.png" type="image/x-icon">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            font-family: Arial, Helvetica, sans-serif;
+            animation: changebck 10s 0s infinite;
+        }
+        div{
+            font-size: 50px;
+            margin: 10px;
+            margin-top: 20%;
+            width: 100px;
+            height: 70px;
+            text-align: center;
+            border: 6px solid black;
+            border-bottom-color: blue;
+            border-left-color: red;
+            border-top-color: green;
+            border-right-color: darkorange;
+            color: rgb(220, 210, 23);
+            border-radius: 6px;
+            padding-top: 20px;
+            background-color: rgb(242, 242, 241);
+            animation: changecolor 10s 0s infinite;
+        }
+        @media (max-width:400px) {
+            div{
+                margin-top: 50%;
+            }
+        }
+        @keyframes changecolor{
+            0%{
+                background-color: purple;
+                border-bottom-color: blue;
+            border-left-color: red;
+            border-top-color: green;
+            color: deeppink;
+            border-right-color: darkorange;
+            }
+            25%{
+                border-bottom-color: rgb(229, 6, 80);
+            border-left-color: rgb(94, 236, 82);
+            border-top-color: rgb(250, 94, 9);
+            border-right-color: darkorange;
+            color: rgb(59, 4, 147);
+                background-color: rgb(9, 218, 89);
+            } 
+            50%{
+                background-color: purple;
+                border-bottom-color: blue;
+            border-left-color: rgb(178, 222, 20);
+            border-top-color: green;
+            color: darkorchid;
+            border-right-color: rgb(187, 113, 17);
+            }
+            75%{
+                border-bottom-color: rgb(229, 6, 80);
+            border-left-color: rgb(94, 236, 82);
+            border-top-color: rgb(250, 94, 9);
+            border-right-color: darkorange;
+                background-color: rgb(9, 218, 89);
+                color: crimson;
+            }
+            100%{
+                border-bottom-color: rgb(229, 6, 80);
+            border-left-color: rgb(94, 236, 82);
+            border-top-color: rgb(250, 94, 9);
+            border-right-color: darkorange;
+                background-color: rgb(9, 218, 89);
+                color: black;
+            }
+
+        }
+        @keyframes changebck {
+           0%{
+             background-color: rgb(230, 90, 90);
+           } 
+           25%{
+            background-color: rgb(172, 100, 239);
+        } 
+        50%{
+            background-color: rgb(111, 189, 192);
+        } 
+        75%{
+            background-color: burlywood;
+        } 
+        100%{
+            background-color: rgb(234, 88, 118);
+        } 
+        }
+    </style>
+</head>
+<body onload="clock()"> 
+    <div id="hours"></div>
+    <div id="minutes"></div>
+    <div id="second"></div>
+    <script src="./app.js"></script>
+</body>
+</html>
